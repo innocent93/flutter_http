@@ -14,7 +14,8 @@ class PhotosList extends StatelessWidget {
       ),
       itemCount: photos.length,
       itemBuilder: (context, index) {
-        return Image.network(photos[index].thumbnailUrl);
+        var allPhotos = photos[index].thumbnailUrl;
+        return Image.network("$allPhotos.jpg");
       },
     );
   }
